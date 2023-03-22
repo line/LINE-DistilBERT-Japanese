@@ -2,6 +2,8 @@
 
 131GBのWebコーパスによって学習された日本語の蒸留BERTモデルです。
 
+https://huggingface.co/line-corporation/line-distilbert-base-japanese
+
 ## 概要
 
 このモデルは131GBのWebコーパスで蒸留された日本語DistilBERTです。
@@ -18,6 +20,14 @@ model = AutoModel.from_pretrained("line-corporation/line-distilbert-base-japanes
 
 sentence = "LINE株式会社で[MASK]の研究・開発をしている。"
 print(model(**tokenizer(sentence, return_tensors="pt")))
+```
+
+### Requirements
+
+```txt
+fugashi
+sentencepiece
+unidic-lite
 ```
 
 ## モデルについて

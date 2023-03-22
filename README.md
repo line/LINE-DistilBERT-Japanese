@@ -4,6 +4,8 @@ This is a DistilBERT model pre-trained on 131 GB of Japanese web text.
 The teacher model is BERT-base that built in-house at LINE.
 The model was trained by [LINE Corporation](https://linecorp.com/).
 
+https://huggingface.co/line-corporation/line-distilbert-base-japanese
+
 ## For Japanese
 
 [README_ja.md](./README_ja.md) is written in Japanese.
@@ -17,6 +19,14 @@ model = AutoModel.from_pretrained("line-corporation/line-distilbert-base-japanes
 
 sentence = "LINE株式会社で[MASK]の研究・開発をしている。"
 print(model(**tokenizer(sentence, return_tensors="pt")))
+```
+
+### Requirements
+
+```txt
+fugashi
+sentencepiece
+unidic-lite
 ```
 
 ## Model architecture
